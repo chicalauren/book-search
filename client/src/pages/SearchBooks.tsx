@@ -15,6 +15,7 @@ import type { Book } from '../models/Book';
 import type { GoogleAPIBook } from '../models/GoogleAPIBook';
 import { useMutation } from '@apollo/client';
 import { ADD_BOOK } from '../utils/mutations';
+import { searchGoogleBooks } from '../utils/API'; // Import the function
 
 const SearchBooks = () => {
   // create state for holding returned google api data

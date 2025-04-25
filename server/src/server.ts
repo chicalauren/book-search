@@ -15,7 +15,7 @@ const server = new ApolloServer({
 
 const startApolloServer = async () => {
   await server.start();
-  await db();
+  await db.openUri(process.env.MONGODB_URI || 'mongodb://localhost:27017/booksearch');
 
   const PORT = process.env.PORT || 3001;
   const app = express();
